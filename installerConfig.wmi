@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WargameModInstallerConfig>
+  <!--Are you looking at the code? Modder in the making!-->
+  <Settings>
+    <General>
+      <WargameVersion Version="RD" />
+      <ModName>AshShadows</ModName>
+      <CriticalCommands Value="True" />
+      <InstallationBackup Value="True" />
+    </General>
+    <UI>
+      <Screens>
+        <WelcomeScreen>
+          <Header Text="Welcome to the Wargame: Ash and Shadows Mod." />
+          <Description Text="Installation program for installing and uninstalling WARGAME:RED DRAGON &quot;Ash and Shadows&quot; Modification.&#xD;&#xA;&#xD;&#xA;If you experience any issues with Gameplay Balance or technical problems with the installer you can contact the creator Spectre_nz at http://forums.eugensystems.com/viewtopic.php?f=187&amp;t=55561#p875706&#xD;&#xA; &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Please click the &quot;Next&quot; button to continue..." />
+          <BackgroundImage Path="..\Backgrounds\welcome.jpg" />
+        </WelcomeScreen>
+        <LocationScreen>
+          <Header Text="Locate your base Wargame: Red Dragon Files" />
+          <Description Text="The setup will install the mod into your Wargame: Red Dragon folder.&#xD;&#xA;&#xD;&#xA;If the following location is not your Wargame: Red Dragon installation directory, please specify a correct one by clicking the &quot;Browse&quot; button.&#xD;&#xA;&#xD;&#xA;(The default location on PC should be &quot;C://Program Files (x86)/Steam/steamapps/common/Wargame Red Dragon/&quot;)&#xD;&#xA;&#xD;&#xA;Click the &quot;Next&quot; button when you are ready to continue." />
+          <BackgroundImage Path="..\Backgrounds\welcome.jpg" />
+        </LocationScreen>
+        <ComponentSelectionScreen>
+          <Header Text="Select to either install or uninstall the Ash and Shadows Mod." />
+          <Description Text="Select only ONE option." />
+          <BackgroundImage Path="..\Backgrounds\welcome.jpg" />
+        </ComponentSelectionScreen>
+        <ProgressScreen>
+          <Header Text="The mod is setting up." />
+          <Description Text="Loading..." />
+          <BackgroundImage Path="..\Backgrounds\welcome.jpg" />
+        </ProgressScreen>
+        <InstallCompletedScreen>
+          <Header Text="Installation Finished" />
+          <Description Text="Congratulations, You have successfully Installed/Uninstalled The Ash and Shadows Modification.&#xD;&#xA;&#xD;&#xA;Don't forget that you can only play with other people who have the modification otherwise you will desync from the game.." />
+          <BackgroundImage Path="..\Backgrounds\complete.jpg" />
+        </InstallCompletedScreen>
+        <InstallFailedScreen>
+          <!--<Header Text="Here goes your text"/>-->
+          <!--<Description Text="Here goes your text"/>-->
+          <!--<BackgroundImage Path="MyBackgroundDirectory\MyBackgroundFile.jpg"/>-->
+        </InstallFailedScreen>
+        <InstallCanceledScreen>
+          <Header Text="Installation Canceled" />
+          <Description Text="You have canceled the installation.&#xD;&#xA;&#xD;&#xA;Click &quot;Finish&quot; to close the program." />
+          <!--<BackgroundImage Path="MyBackgroundDirectory\MyBackgroundFile.jpg"/>-->
+        </InstallCanceledScreen>
+      </Screens>
+    </UI>
+  </Settings>
+  <InstallCommands>
+    <Component name="rc" type="Required" text="Ash and Shadows Mod">
+      <Component name="inst" type="Exclusive" text="Install">
+        <CopyModFile sourcePath="..\Files\NDF_Win.dat" targetPath="Data\WARGAME\PC\510064564\NDF_Win.dat" />
+        <CopyModFile sourcePath="..\Files\ZZ_Win.dat" targetPath="Data\WARGAME\PC\510060540\510061340\ZZ_Win.dat" />
+        <CopyModFile sourcePath="..\Files\ZZ_4.dat" targetPath="Data\WARGAME\PC\510060540\510061340\ZZ_4.dat" />
+	<CopyModFile sourcePath="..\Files\loadscr\ZZ_4.dat" targetPath="Data\WARGAME\PC\430000210\ZZ_4.dat" />
+	<CopyModFile sourcePath="..\Files\loadscr\ZZ_Win.dat" targetPath="Data\WARGAME\PC\430000564\430000574\ZZ_Win.dat" />
+	<CopyModFile sourcePath="..\Files\flags\ZZ_4.dat" targetPath="Data\WARGAME\PC\510057270\510060540\ZZ_4.dat" />
+	<CopyModFile sourcePath="..\Files\flags\ZZ_Win.dat" targetPath="Data\WARGAME\PC\510053208\510057270\ZZ_Win.dat" />
+	<CopyModFile sourcePath="..\Files\cpgn\ZZ_Win.dat" targetPath="Data\WARGAME\PC\430000587\430000609\ZZ_Win.dat" />
+	      </Component>
+      <Component name="uninst" type="Exclusive" text="Uninstall">
+        <CopyModFile sourcePath="..\Files\Original\NDF_Win.dat" targetPath="Data\WARGAME\PC\510064564\NDF_Win.dat" />
+        <CopyModFile sourcePath="..\Files\Original\ZZ_Win.dat" targetPath="Data\WARGAME\PC\510060540\510061340\ZZ_Win.dat" />
+        <CopyModFile sourcePath="..\Files\Original\ZZ_4.dat" targetPath="Data\WARGAME\PC\510060540\510061340\ZZ_4.dat" />
+	<CopyModFile sourcePath="..\Files\Original\loadscr\ZZ_4.dat" targetPath="Data\WARGAME\PC\430000210\ZZ_4.dat" />
+        <CopyModFile sourcePath="..\Files\Original\loadscr\ZZ_Win.dat" targetPath="Data\WARGAME\PC\430000564\430000574\ZZ_Win.dat" />
+	<CopyModFile sourcePath="..\Files\Original\flags\ZZ_4.dat" targetPath="Data\WARGAME\PC\510057270\510060540\ZZ_4.dat" />
+	<CopyModFile sourcePath="..\Files\Original\flags\ZZ_Win.dat" targetPath="Data\WARGAME\PC\510053208\510057270\ZZ_Win.dat" />
+	<CopyModFile sourcePath="..\Files\Original\cpgn\ZZ_Win.dat" targetPath="Data\WARGAME\PC\430000587\430000609\ZZ_Win.dat" />
+	      </Component>
+    </Component>
+  </InstallCommands>
+</WargameModInstallerConfig>
